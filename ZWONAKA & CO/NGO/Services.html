@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZWONAKA & CO | Services</title>
+    <meta name="keywords" content="ZWONAKA & CO, services, rehabilitation, detoxification, counseling, aftercare" />
+    <meta name="description" content="Explore ZWONAKA & CO services. Use search and filters to quickly find support programs and get in touch." />
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function toggleNav(){
+            const bar = document.querySelector('.navbar');
+            if(bar) bar.classList.toggle('open');
+        }
+
+        function updateLiveDateTime(){
+            const el = document.getElementById('liveDateTime');
+            if(!el) return;
+            const now = new Date();
+            const date = now.toLocaleDateString(undefined, { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+            const time = now.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            el.textContent = `${date} • ${time}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function(){
+            updateLiveDateTime();
+            setInterval(updateLiveDateTime, 1000);
+        });
+    </script>
+    <script defer src="js/app.js"></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <h1>ZWONAKA & CO</h1>
+        <p>Reclaiming lives, restoring hope and guiding homeless people from streets to stability.</p>
+    </div>
+</header>
+
+<nav class="navbar" role="navigation">
+    <div class="container nav-inner">
+        <div class="brand">
+            <img src="NAKI.jpeg" alt="ZWONAKA logo">
+            <span>ZWONAKA & CO</span>
+        </div>
+        <div class="live-date-time" aria-label="Current date and time">
+            <span id="liveDateTime"></span>
+        </div>
+        <button class="nav-toggle" type="button" onclick="toggleNav()">☰ Menu</button>
+        <div class="nav-links" aria-label="Primary navigation">
+            <a href="HOMEPAGE22.html">Homepage</a>
+            <a href="Services.html">Services</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Contact Us.html">Contact Us</a>
+            <a href="sitemap.html">Site Map</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container page">
+    <div class="card" style="margin-top:18px;">
+        <h2>Our Services</h2>
+        <p>Search and filter to find the right support program.</p>
+
+        <section data-content-search style="margin-top:14px;">
+          <div class="search-controls">
+            <input data-search-input type="search" placeholder="Search services (e.g. detox, counselling, aftercare)" aria-label="Search services" />
+            <button class="btn" type="button" onclick="location.href='Contact Us.html'">Contact Us</button>
+          </div>
+
+          <div class="filter-bar" aria-label="Service filters">
+            <button class="filter-btn is-active" type="button" data-filter-btn="all">All</button>
+            <button class="filter-btn" type="button" data-filter-btn="Rehabilitation">Rehabilitation</button>
+            <button class="filter-btn" type="button" data-filter-btn="Support">Support</button>
+            <button class="filter-btn" type="button" data-filter-btn="Counselling">Counselling</button>
+          </div>
+
+          <div style="display:none;">
+            <script type="application/json">[
+              {"title":"Rescue and Transportation","category":"Support","description":"Safe transportation from the streets to our rehabilitation center.","tags":["rescue","transport"]},
+              {"title":"Medical Detoxification","category":"Rehabilitation","description":"Medically supervised detoxification for a safe and comfortable withdrawal process.","tags":["detox","medical"]},
+              {"title":"Counseling and Therapy","category":"Counselling","description":"Individual and group counseling, therapy, and peer support.","tags":["therapy","peer support"]},
+              {"title":"Rehabilitation Programs","category":"Rehabilitation","description":"Life skills, education, and job training programs for sustainable recovery.","tags":["life skills","job training"]},
+              {"title":"Aftercare and Support","category":"Support","description":"Ongoing support and guidance for reintegration into society.","tags":["aftercare","reintegration"]},
+              {"title":"Community Reengagement","category":"Support","description":"Help accessing healthcare services, community resources, and social benefits.","tags":["community","resources"]}
+            ]</script>
+          </div>
+
+          <div class="results-grid" data-search-results aria-live="polite"></div>
+        </section>
+
+        <section class="accordion" data-accordion style="margin-top:18px;">
+          <div class="accordion-item" data-accordion-item>
+            <div class="accordion-header" data-accordion-header tabindex="0" role="button" aria-expanded="false">
+              <span>How do we start support?</span>
+              <span class="chev">▾</span>
+            </div>
+            <div class="accordion-panel" data-accordion-panel hidden>
+              Contact us and share your needs. We will guide you to the correct program (support, counselling, or rehabilitation).
+            </div>
+          </div>
+
+          <div class="accordion-item" data-accordion-item>
+            <div class="accordion-header" data-accordion-header tabindex="0" role="button" aria-expanded="false">
+              <span>Do you support volunteers?</span>
+              <span class="chev">▾</span>
+            </div>
+            <div class="accordion-panel" data-accordion-panel hidden>
+              Yes—use the Enquiry form on the Contact page. We will share available volunteer opportunities.
+            </div>
+          </div>
+        </section>
+
+        <div class="logo-container" style="margin-top:18px; text-align:center;">
+            <img src="NAKI.jpeg" alt="ZWONAKA & CO Logo" width="320" height="320">
+        </div>
+
+        <section class="operational-hours card" style="margin-top:18px;">
+            <h2>Operational Hours</h2>
+            <p>Monday - Friday: 08:00 AM – 05:00 PM</p>
+            <p>Saturday: 09:00 AM – 01:00 PM</p>
+            <p>Sunday &amp; Public Holidays: Closed</p>
+        </section>
+    </div>
+
+    <div class="button-list">
+      <button><a href="HOMEPAGE22.html">Homepage</a></button>
+      <button><a href="Services.html">Services</a></button>
+      <button><a href="About Us.html">About Us</a></button>
+      <button><a href="Gallery.html">Gallery</a></button>
+      <button><a href="Contact Us.html">Contact Us</a></button>
+      <button><a href="sitemap.html">Site Map</a></button>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 ZWONAKA & CO. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
+

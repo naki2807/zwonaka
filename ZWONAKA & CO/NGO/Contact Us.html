@@ -1,0 +1,189 @@
+<!--Contact Us.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZWONAKA & CO | Contact Us</title>
+  <meta name="keywords" content="ZWONAKA & CO, contact, Polokwane, homeless support, rehabilitation, volunteer" />
+  <meta name="description" content="Contact ZWONAKA & CO in Polokwane. Use the form for enquiries, support or volunteering. Fast validation with on-page responses." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    function toggleNav(){
+      const bar = document.querySelector('.navbar');
+      if(bar) bar.classList.toggle('open');
+    }
+    function updateLiveDateTime(){
+      const el = document.getElementById('liveDateTime');
+      if(!el) return;
+      const now = new Date();
+      const date = now.toLocaleDateString(undefined, { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+      const time = now.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      el.textContent = `${date} • ${time}`;
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      updateLiveDateTime();
+      setInterval(updateLiveDateTime, 1000);
+    });
+  </script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>ZWONAKA & CO</h1>
+      <p>Get in touch with our team.</p>
+    </div>
+  </header>
+
+  <nav class="navbar" role="navigation">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="NAKI.jpeg" alt="ZWONAKA logo" />
+        <span>ZWONAKA & CO</span>
+      </div>
+      <div class="live-date-time" aria-label="Current date and time">
+        <span id="liveDateTime"></span>
+      </div>
+      <button class="nav-toggle" type="button" onclick="toggleNav()">☰ Menu</button>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="HOMEPAGE22.html">Homepage</a>
+        <a href="Services.html">Services</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Contact Us.html">Contact Us</a>
+        <a href="sitemap.html">Site Map</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container page">
+    <div class="card" style="margin-top:18px;">
+      <h2>Contact Us</h2>
+      <p>Reach out for enquiries, volunteering, and support.</p>
+
+      <address style="margin-top:10px;">
+        <p><strong>Physical Address:</strong> Polokwane, House 10 Bourke, 0002</p>
+        <p><strong>Tel:</strong> <a href="tel:0764497336">076 449 7336</a></p>
+        <p><strong>Email:</strong> <a href="mailto:ZWONAKA&CO@gmail.com">ZWONAKA&CO@gmail.com</a></p>
+      </address>
+
+      <div class="map-wrap" style="margin-top:14px;">
+        <iframe
+          class="map-iframe"
+          title="ZWONAKA & CO location map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Polokwane%2C%20South%20Africa&output=embed">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px;">
+      <h2>Send a message</h2>
+      <p>Fields are validated instantly. After validation, your email client will open with a pre-filled message.</p>
+
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" />
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" placeholder="e.g. 071 234 5678" inputmode="tel" />
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Volunteer enquiry / General question" maxlength="80" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message..." rows="5" maxlength="1000"></textarea>
+        </div>
+
+        <button class="btn" type="submit">Submit</button>
+        <div data-form-message aria-live="polite"></div>
+      </form>
+    </div>
+
+    <div class="card" style="margin-top:18px;">
+      <h2>Enquiry (Volunteer / Support)</h2>
+      <p>Use this enquiry form to help us route your request faster. Validation includes empty fields, email/phone formats, and character limits.</p>
+
+      <form id="enquiryForm" novalidate>
+        <div class="field">
+          <label for="enqName">Full Name</label>
+          <input type="text" id="enqName" name="enqName" placeholder="Your full name" />
+        </div>
+
+        <div class="field">
+          <label for="enqEmail">Email</label>
+          <input type="email" id="enqEmail" name="enqEmail" placeholder="name@example.com" />
+        </div>
+
+        <div class="field">
+          <label for="enqPhone">Phone</label>
+          <input type="text" id="enqPhone" name="enqPhone" placeholder="e.g. 076 449 7336" inputmode="tel" />
+        </div>
+
+        <div class="field">
+          <label for="enqTopic">Choose a topic</label>
+          <select id="enqTopic" name="topic">
+            <option value="none">Select an option</option>
+            <option value="Support Program">Support Program</option>
+            <option value="Volunteer Team">Volunteer Team</option>
+            <option value="Rehabilitation Services">Rehabilitation Services</option>
+            <option value="Aftercare Support">Aftercare Support</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <p style="margin-bottom:6px;"><strong>Enquiry type</strong></p>
+          <label><input type="radio" name="enquiryType" value="Volunteer"> Volunteer</label><br />
+          <label><input type="radio" name="enquiryType" value="Product/Service"> Product/Service</label><br />
+          <label><input type="radio" name="enquiryType" value="Event"> Event</label>
+        </div>
+
+        <div class="field">
+          <p style="margin-bottom:6px;"><strong>Interested in</strong></p>
+          <label><input type="checkbox" name="enqInterests" value="Transport" /> Transport</label><br />
+          <label><input type="checkbox" name="enqInterests" value="Medical Detox" /> Medical Detox</label><br />
+          <label><input type="checkbox" name="enqInterests" value="Counselling" /> Counselling</label>
+        </div>
+
+        <div class="field">
+          <label for="enqNotes">Notes</label>
+          <textarea id="enqNotes" name="notes" placeholder="Add any details we should know..." rows="4"></textarea>
+        </div>
+
+        <button class="btn" type="submit">Send enquiry</button>
+        <div data-form-message aria-live="polite"></div>
+      </form>
+    </div>
+  </main>
+
+  <div class="button-list">
+    <button><a href="HOMEPAGE22.html">Homepage</a></button>
+    <button><a href="Services.html">Services</a></button>
+    <button><a href="About Us.html">About Us</a></button>
+    <button><a href="Gallery.html">Gallery</a></button>
+    <button><a href="Contact Us.html">Contact Us</a></button>
+    <button><a href="sitemap.html">Site Map</a></button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 ZWONAKA & CO. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

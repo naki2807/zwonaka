@@ -1,0 +1,166 @@
+<!--About Us.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZWONAKA & CO | About Us</title>
+  <meta name="keywords" content="ZWONAKA & CO, about us, team, rehabilitation, volunteer, Polokwane" />
+  <meta name="description" content="Meet the ZWONAKA & CO team. Learn about our mission, vision, and how we support rehabilitation and reintegration." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    function toggleNav(){
+      const bar = document.querySelector('.navbar');
+      if(bar) bar.classList.toggle('open');
+    }
+
+    function updateLiveDateTime(){
+      const el = document.getElementById('liveDateTime');
+      if(!el) return;
+
+      const now = new Date();
+      const date = now.toLocaleDateString(undefined, { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+      const time = now.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      el.textContent = `${date} • ${time}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      updateLiveDateTime();
+      setInterval(updateLiveDateTime, 1000);
+    });
+  </script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>ZWONAKA & CO</h1>
+    <p>About our team and services.</p>
+  </div>
+</header>
+
+<nav class="navbar" role="navigation">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="NAKI.jpeg" alt="ZWONAKA logo">
+      <span>ZWONAKA & CO</span>
+    </div>
+    <div class="live-date-time" aria-label="Current date and time">
+      <span id="liveDateTime"></span>
+    </div>
+    <button class="nav-toggle" type="button" onclick="toggleNav()">☰ Menu</button>
+    <div class="nav-links" aria-label="Primary navigation">
+      <a href="HOMEPAGE22.html">Homepage</a>
+      <a href="Services.html">Services</a>
+      <a href="About Us.html">About Us</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Contact Us.html">Contact Us</a>
+      <a href="sitemap.html">Site Map</a>
+
+    </div>
+  </div>
+</nav>
+
+<div class="about-section card">
+  <h1>About Us Page</h1>
+  <p>Some information about who we are and what we do.</p>
+
+  <div class="tabs" data-tabs style="margin-top:14px;">
+    <div class="tab-list" data-tab-list role="tablist" aria-label="About tabs">
+      <button type="button" class="tab-button is-active" data-tab="vision" aria-selected="true">Vision</button>
+      <button type="button" class="tab-button" data-tab="mission" aria-selected="false">Mission</button>
+      <button type="button" class="tab-button" data-tab="aim" aria-selected="false">Aim</button>
+    </div>
+
+    <section class="tab-panel" data-tab-panel="vision" aria-label="Vision" hidden>
+      Reclaiming lives, restoring hope and guiding homeless people from streets to stability through rehabilitation.
+    </section>
+    <section class="tab-panel" data-tab-panel="mission" aria-label="Mission" hidden>
+      To rescue, rehabilitate, and reintegrate homeless people struggling with addiction—providing a comprehensive support system for sustainable recovery.
+    </section>
+    <section class="tab-panel" data-tab-panel="aim" aria-label="Aim" hidden>
+      To help people back on their feet and support reintegration into normal life.
+    </section>
+  </div>
+
+  <p style="margin-top:12px;">This page gives you information about our team and how to get hold of them.</p>
+</div>
+
+
+<h2 style="text-align:center">Our Team</h2>
+
+<div class="row">
+    <div class="column">
+      <div class="card team-card">
+      <img src="NAKI.jpeg" alt="NKHUMELENI ZWONAKA" class="team-photo">
+      <div class="container">
+        <h2>NKHUMELENI ZWONAKA</h2>
+
+        <p class="title">CEO & Founder</p>
+        <p>The founder of ZWONAKA & CO.</p>
+        <p>nakizwonaka4@gmail.com
+            <br>
+            0761583378
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="VUXA.jpeg" alt="vuxa thwala" class="team-photo float-photo">
+      <div class="container">
+        <h2>vuxa thwala</h2>
+        <p class="title">Art Director</p>
+        <p>ART DIRECTOR.</p>
+        <p>vuxathwala023@gmail.com
+            <br>
+            0607997088
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="14.jpg" alt="ZWIVHUYA NDOU" class="team-photo">
+      <div class="container">
+        <h2>ZWIVHUYA NDOU</h2>
+        <p class="title">Designer</p>
+        <p>The designer of ZWONAKA & CO.</p>
+        <p>ndouzwivhuya@gmail.com
+            <br>
+            0764407336
+        </p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<footer class="site-footer">
+    <div class="footer-content">
+     <p>&copy;2025 ZWONAKA & CO. All right reserved.</p>
+    </div>
+</footer>
+
+ <div class= button list>
+    <button><a href= "HOMEPAGE22.html"> Homepage</a></button>
+    <button><a href= "Services.html">Services</a></button>
+       <button><a href= "About Us.html">About us</a></button>
+    <button><a href= "Gallery.html">Gallery</a></button>
+    <button><a href= "Contact Us.html">Contact Us</a></button>
+    <button><a href= "sitemap.html">Site Map</a></button>
+
+</button>
+
+
+</body>
+</html>

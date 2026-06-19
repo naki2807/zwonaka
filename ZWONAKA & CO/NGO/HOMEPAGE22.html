@@ -1,0 +1,106 @@
+<!--HOMEPAGE22.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZWONAKA & CO | Home</title>
+  <meta name="keywords" content="ZWONAKA & CO, home, rehabilitation, homeless support, addiction recovery" />
+  <meta name="description" content="Welcome to ZWONAKA & CO. We rescue, rehabilitate and reintegrate homeless people struggling with addiction. Learn more and contact us." />
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Lightweight responsive nav toggle (supports all pages that reuse the markup)
+    function toggleNav(){
+      const bar = document.querySelector('.navbar');
+      if(bar) bar.classList.toggle('open');
+    }
+
+    // Live date + time
+    function updateLiveDateTime(){
+      const el = document.getElementById('liveDateTime');
+      if(!el) return;
+
+      const now = new Date();
+      const date = now.toLocaleDateString(undefined, { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+      const time = now.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      el.textContent = `${date} • ${time}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      updateLiveDateTime();
+      setInterval(updateLiveDateTime, 1000);
+    });
+  </script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="container">
+    <h1 data-anim="scroll">ZWONAKA & CO</h1>
+    <p data-anim="scroll">Reclaiming lives , restoring hope and guiding homeless people from streets to stability through rehabilitation and the mission is To rescue, rehabilitate, and reintegrate homeless people struggling with addiction.</p>
+  </div>
+</header>
+
+
+<nav class="navbar" role="navigation">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="NAKI.jpeg" alt="ZWONAKA logo">
+      <span>ZWONAKA & CO</span>
+    </div>
+    <div class="live-date-time" aria-label="Current date and time">
+      <span id="liveDateTime"></span>
+    </div>
+    <button class="nav-toggle" type="button" onclick="toggleNav()">☰ Menu</button>
+    <div class="nav-links" aria-label="Primary navigation">
+      <a href="HOMEPAGE22.html">Homepage</a>
+      <a href="Services.html">Services</a>
+      <a href="About Us.html">About Us</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Contact Us.html">Contact Us</a>
+      <a href="sitemap.html">Site Map</a>
+    </div>
+  </div>
+</nav>
+
+<br>
+
+<div class="row">
+  <div class="side">
+
+    <h1 data-anim="scroll">Welcome to ZWONAKA & CO</h1>
+
+    <p data-anim="scroll">
+      
+      <img src="NAKI.jpeg" alt="NAKI" style="width:40%" data-anim="scroll">
+    </p>
+    <p data-anim="scroll"><i>WE THE POOR AND HOMELESS, CAN AND MUST LEAD OUR OWN STRUGGLE TO END POVERTY.</i></p>
+  
+    <h1 data-anim="scroll">Vision Statement</h1>
+    <p data-anim="scroll">Reclaiming lives, restoring hope and guiding homeless people from streets to stability through rehabilitation.</p>
+  <br>
+    <h1 data-anim="scroll">Mission Statement</h1>
+    <p data-anim="scroll">To rescue, rehabilitate, and reintegrate homeless people struggling with addiction, providing a comprehensive support system for sustainable recovery and reintegration into society.</p>
+  <br>
+    <h1 data-anim="scroll">Aim</h1>
+    <p data-anim="scroll">The aim is to get homeless people back on their feet and more likely back to their normal lives. It ensures to get them clean by taking them to rehabilitation centers to help them with their addiction.</p>
+  <br>
+
+    <div class="button-list">
+      
+      <button><a href="HOMEPAGE22.html">Homepage</a></button>
+      <button><a href="Services.html">Services</a></button>
+      <button><a href="About Us.html">About Us</a></button>
+      <button><a href="Gallery.html">Gallery</a></button>
+      <button><a href="Contact Us.html">Contact Us</a></button>
+      <button><a href="sitemap.html">Site Map</a></button>
+    </div>
+  
+    <footer class="footer-content">
+      <p>&copy; 2026 ZWONAKA & CO. All rights reserved.</p>
+    </footer>
+  
+  </body>
+  </html>

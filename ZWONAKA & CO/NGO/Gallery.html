@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZWONAKA & CO | Gallery</title>
+  <meta name="keywords" content="ZWONAKA & CO, gallery, rehabilitation, homeless support, addiction, Polokwane" />
+  <meta name="description" content="View ZWONAKA & CO gallery photos. Click any image to open a responsive lightbox on desktop and mobile." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    function toggleNav(){
+      const bar = document.querySelector('.navbar');
+      if(bar) bar.classList.toggle('open');
+    }
+    function updateLiveDateTime(){
+      const el = document.getElementById('liveDateTime');
+      if(!el) return;
+      const now = new Date();
+      const date = now.toLocaleDateString(undefined, { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+      const time = now.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      el.textContent = `${date} • ${time}`;
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      updateLiveDateTime();
+      setInterval(updateLiveDateTime, 1000);
+    });
+  </script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <!-- Modal / Lightbox -->
+  <div id="modalOverlay" aria-hidden="true"></div>
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div id="modalHeader">
+      <div id="modalTitle">Gallery</div>
+      <button id="modalClose" type="button" aria-label="Close modal">✕</button>
+    </div>
+    <div id="modalBody"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>ZWONAKA & CO</h1>
+      <p>Reclaiming lives through rehabilitation and support.</p>
+    </div>
+  </header>
+
+  <nav class="navbar" role="navigation">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="NAKI.jpeg" alt="ZWONAKA logo" />
+        <span>ZWONAKA & CO</span>
+      </div>
+      <div class="live-date-time" aria-label="Current date and time">
+        <span id="liveDateTime"></span>
+      </div>
+      <button class="nav-toggle" type="button" onclick="toggleNav()">☰ Menu</button>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="HOMEPAGE22.html">Homepage</a>
+        <a href="Services.html">Services</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Contact Us.html">Contact Us</a>
+        <a href="sitemap.html">Site Map</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container page">
+    <div class="card" style="margin-top:18px;">
+      <h2>Image Gallery</h2>
+      <p>Click an image to open a larger version. Works on both desktop and mobile.</p>
+
+      <section data-gallery class="gallery-grid" aria-label="Gallery thumbnails">
+        <div class="gallery-item" data-anim>
+          <a href="#" data-lightbox-item data-full="14.jpg" data-caption="Rehabilitation challenges of addiction" aria-label="Open image: Rehabilitation challenges of addiction">
+            <img src="14.jpg" alt="Rehabilitation challenges of addiction" />
+          </a>
+          <div class="desc">Rehabilitation challenges</div>
+        </div>
+
+        <div class="gallery-item" data-anim>
+          <a href="#" data-lightbox-item data-full="11.jpg" data-caption="Drug abuse awareness" aria-label="Open image: Drug abuse awareness">
+            <img src="11.jpg" alt="Drug abuse awareness" />
+          </a>
+          <div class="desc">Drug abuse awareness</div>
+        </div>
+
+        <div class="gallery-item" data-anim>
+          <a href="#" data-lightbox-item data-full="12.jpg" data-caption="Drug addiction and homelessness" aria-label="Open image: Drug addiction and homelessness">
+            <img src="12.jpg" alt="Drug addiction and homelessness" />
+          </a>
+          <div class="desc">Addiction & homelessness</div>
+        </div>
+
+        <div class="gallery-item" data-anim>
+          <a href="#" data-lightbox-item data-full="13.jpg" data-caption="Poverty, homelessness and social stigma" aria-label="Open image: Poverty, homelessness and social stigma">
+            <img src="13.jpg" alt="Poverty, homelessness and social stigma" />
+          </a>
+          <div class="desc">Poverty & stigma</div>
+        </div>
+      </section>
+
+      <div style="padding:6px;margin-top:12px;">
+        <p>
+          We reclaim lives, restore hope and guide homeless people from the streets to stability through rehabilitation and support.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <div class="button-list">
+    <button><a href="HOMEPAGE22.html">Homepage</a></button>
+    <button><a href="Services.html">Services</a></button>
+    <button><a href="About Us.html">About Us</a></button>
+    <button><a href="Gallery.html">Gallery</a></button>
+    <button><a href="Contact Us.html">Contact Us</a></button>
+    <button><a href="sitemap.html">Site Map</a></button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 ZWONAKA & CO. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

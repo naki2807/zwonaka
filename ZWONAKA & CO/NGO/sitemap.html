@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZWONAKA & CO | Site Map</title>
+  <meta name="keywords" content="ZWONAKA & CO, site map, homepage, services, about us, gallery, contact us" />
+  <meta name="description" content="Explore the ZWONAKA & CO website map. Find links to Homepage, Services, About Us, Gallery, and Contact Us." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    function toggleNav(){
+      const bar = document.querySelector('.navbar');
+      if(bar) bar.classList.toggle('open');
+    }
+
+    function updateLiveDateTime(){
+      const el = document.getElementById('liveDateTime');
+      if(!el) return;
+      const now = new Date();
+      const date = now.toLocaleDateString(undefined, { weekday: 'short', year: 'numeric', month: 'short', day: '2-digit' });
+      const time = now.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      el.textContent = `${date} • ${time}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      updateLiveDateTime();
+      setInterval(updateLiveDateTime, 1000);
+    });
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>ZWONAKA & CO</h1>
+      <p>Site map & quick links.</p>
+    </div>
+  </header>
+
+  <nav class="navbar" role="navigation">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="NAKI.jpeg" alt="ZWONAKA logo" />
+        <span>ZWONAKA & CO</span>
+      </div>
+
+      <div class="live-date-time" aria-label="Current date and time">
+        <span id="liveDateTime"></span>
+      </div>
+
+      <button class="nav-toggle" type="button" onclick="toggleNav()">☰ Menu</button>
+
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="HOMEPAGE22.html">Homepage</a>
+        <a href="Services.html">Services</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Contact Us.html">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container page">
+    <div class="card" style="margin-top:18px;">
+      <h2>Site Map</h2>
+      <ul>
+        <li><a href="HOMEPAGE22.html">Homepage</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+        <li><strong>Site Map</strong></li>
+      </ul>
+
+      <p style="margin-top:12px;"><a class="btn" href="Contact Us.html">Contact Us</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 ZWONAKA & CO. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
